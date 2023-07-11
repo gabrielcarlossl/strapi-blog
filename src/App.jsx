@@ -9,14 +9,11 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
-          
-        
-        <Route path='/blog' element={<BlogPage />}/>
-          
-        
+        <Route path='/blog/:blogTitle' element={<BlogPage />} />
       </Routes>
     </>
   )
 }
+
 
 export default App

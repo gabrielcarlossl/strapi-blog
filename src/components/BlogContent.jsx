@@ -1,6 +1,9 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const BlogContent = () => {
+
+    const { blogTitle } = useParams()
 
     const blogs = {
         "id": 1,
@@ -20,7 +23,7 @@ const BlogContent = () => {
 
                     <div className='col-span-2 gap-x-8 gap-y-8'>
                         <img className='mt-20 h-56 w-full object-contain' src={blogs.blogImg} alt="" />
-                        <h1 className='font-bold text-2xl my-1 pt-5'>{blogs.blogTitle}</h1>
+                        <h1 className='font-bold text-2xl my-1 pt-5'>{blogTitle}</h1>
                         <div className='pt-5'>
                             <p>{blogs.blogContent}</p>
                         </div>
