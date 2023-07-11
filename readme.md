@@ -8,6 +8,8 @@
 
 - `npm run dev`
 
+- `http://localhost:5173/`
+
 ## Run Strapi CMS
 
 - `cd strapi`
@@ -15,3 +17,5 @@
 - `npm i`
 
 - `npm run develop`
+
+- `http://localhost:1337/admin/auth/login`
