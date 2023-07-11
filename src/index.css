@@ -9,6 +9,12 @@
     button{
         @apply text-white border bg-indigo-600 border-indigo-600 hover:bg-transparent hover:text-indigo-600 rounded-md
     }
+    button:disabled  {
+        background-color: rgba(128, 128, 128, 0.473);
+        border-color: gray;
+        color: gray;
+        cursor: not-allowed;
+    }
   
     ul {
       padding: 0;
