@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     const [toggle, setToggle] = useState(false)
@@ -7,12 +8,14 @@ const NavBar = () => {
     return (
         <div className='w-full h-[80px] z-10 bg-white fixed drop-shadow-lg relative'>
             <div className='flex justify-between items-center w-full h-full md:max-w-[1240px] m-auto'>
-                <div className='flex items-center sm-max:ml-10  xl:ml-10 }'>
-                    <img className=' sm:ml-10 md:ml-3' width={50} src="/src/assets/blogger.png" alt="logo" />
-                </div>
+                <Link to='/'>
+                    <div className='flex items-center sm-max:ml-10  xl:ml-10 }'>
+                        <img className=' sm:ml-10 md:ml-3' width={50} src="/src/assets/blogger.png" alt="logo" />
+                    </div>
+                </Link>
                 <div className='flex items-center '>
                     <ul className='hidden md:flex'>
-                        <li>StraBlogi</li>
+                        <li><Link to='/'>StraBlogi</Link></li>
                         <li>Sobre</li>
                         <li>Suporte</li>
                         <li>Orçamento</li>

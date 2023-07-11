@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import { Link } from 'react-router-dom';
 const Blogs = () => {
 
     const blogs = [
@@ -176,28 +177,30 @@ const Blogs = () => {
         return paginationButtons;
     }
 
-    
+
     return (
 
         <div className='w-full bg-[#f9f9f9f9] py-[50px] '>
             <div className='max-w-[1240px] mx-auto'>
-                <div className={blogPerPage === '1' ? 'grid lg:grid-cols-3 md:grid-cols-1  gap-8 px-4 text-black' :'grid lg:grid-cols-3 md:grid-cols-2  gap-8 px-4 text-black'}>
+                <div className={blogPerPage === '1' ? 'grid lg:grid-cols-3 md:grid-cols-1  gap-8 px-4 text-black' : 'grid lg:grid-cols-3 md:grid-cols-2  gap-8 px-4 text-black'}>
                     {
                         currentBlog.map((blog) => (
-                            <div key={blog.id} className='bg-white rounded-xl overflow-hidden drop-shadow-md'>
-                                <img className='h-56 w-full object-contain' src={blog.blogImg} alt="imagem do blog" />
-                                <div className='p-8 bg-slate-100'>
-                                    <h3 className='font-bold text-2xl my-1 '>{blog.blogTitle}</h3>
-                                    <p className='text-gray-600 text-xl mb-5'>{blog.blogDescription}</p>
-                                    <span className='text-gray-500 text-sm'>Autor: {blog.blogAuthor}</span>
+                            <Link to={`/blog`} key={blog.id}>
+                                <div className='bg-white rounded-xl overflow-hidden drop-shadow-md'>
+                                    <img className='h-56 w-full object-contain' src={blog.blogImg} alt="imagem do blog" />
+                                    <div className='p-8 bg-slate-100'>
+                                        <h3 className='font-bold text-2xl my-1 '>{blog.blogTitle}</h3>
+                                        <p className='text-gray-600 text-xl mb-5'>{blog.blogDescription}</p>
+                                        <span className='text-gray-500 text-sm'>Autor: {blog.blogAuthor}</span>
+                                    </div>
                                 </div>
-                            </div>))
+                            </Link>))
                     }
                 </div>
                 <div className='mt-5 ml-4'>
                     <label htmlFor="blogsPerPage">Blogs por Página</label>
                     <select value={blogPerPage} onChange={e => setBlogPerPage(e.target.value)} className='mx-2' name='blogsPerPage'>
-                        {Object.entries(numberOfBlogs).map((nB)=> (
+                        {Object.entries(numberOfBlogs).map((nB) => (
                             <option key={nB[1] + 1} value={nB[0]}>{nB[1]}</option>
                         ))}
 
