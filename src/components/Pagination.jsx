@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 export const renderPaginationButtons = (currentPage, setCurrentPage, blogs, blogPerPage) => {
-  const totalBlogs = blogs.length;
+  const totalBlogs = blogs.data.length;
   const totalPages = Math.ceil(totalBlogs / blogPerPage);
   const currentPageIndex = currentPage - 1;
 

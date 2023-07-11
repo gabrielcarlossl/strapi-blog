@@ -5,7 +5,7 @@ const useFetch = () => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
 
-  const url = 'http://localhost:1337/api/blogs'
+  const url = 'http://localhost:1337/api/blogs?populate=*'
 
   useEffect(() => {
     const fetchData = async () => {
