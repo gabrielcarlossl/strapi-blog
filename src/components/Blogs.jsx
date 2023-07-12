@@ -23,7 +23,7 @@ const Blogs = ({blogs}) => {
                     {currentBlog.map((blog) => (
                         
                             
-                        <Link to={`/blog/${encodeURIComponent(blog.attributes.blogTitle.replace(/\s+/g, '-'))}`} key={blog.id}>
+                        <Link to={`/blog/${encodeURIComponent(blog.attributes.blogTitle.replace(/\s+/g, '_'))}`} key={blog.id}>
                             <div className='bg-white rounded-xl overflow-hidden drop-shadow-md'>
                                 <img className='h-56 w-full object-contain' src={blog.attributes.blogImg} alt="imagem do blog" />
                                 <div className='p-8 bg-slate-100'>
