@@ -29,7 +29,7 @@ const Blogs = ({blogs}) => {
                                 <div className='p-8 bg-slate-100'>
                                     <h3 className='font-bold text-2xl my-1'>{blog.attributes.blogTitle}</h3>
                                     <p className='text-gray-600 text-xl mb-5'>{blog.attributes.blogDescription}</p>
-                                    <span className='text-gray-500 text-sm'>Autor: {blog.attributes.authorDescription}</span>
+                                    <span className='text-gray-500 text-sm'>Autor: {blog.attributes.blogAuthor}</span>
                                 </div>
                             </div>
                         </Link>
