@@ -8,18 +8,18 @@ const BlogContent = ({ blogs }) => {
 
 
 
-    console.log(formattedBlogTitle)
+  console.log(formattedBlogTitle)
   const filteredBlogs = blogs.data.filter(
     (blog) => blog.attributes.blogTitle == formattedBlogTitle
   )
   console.log('filtered', filteredBlogs)
-  console.log(blogs.data )
+  console.log(blogs.data)
   if (filteredBlogs.length === 0) {
-    
+
     return <div>Nenhum blog correspondente encontrado.</div>;
   }
 
-
+  const blogContentHTML = { __html: filteredBlogs[0].attributes.blogContent }
 
   return (
     <div className="w-full pb-10 bg-[#f9f9f9]">
@@ -34,9 +34,7 @@ const BlogContent = ({ blogs }) => {
               alt=""
             />
             <h1 className="font-bold text-2xl my-1 pt-5">{formattedBlogTitle}</h1>
-            <div className="pt-5">
-              <p>{filteredBlogs[0].attributes.blogContent}</p>
-            </div>
+            <div className="pt-5" dangerouslySetInnerHTML={blogContentHTML} />
           </div>
 
           <div className="mt-20 w-full bg-white rounded-xl overflow-hidden drop-shadow-md py-5 max-h-[250px]">
