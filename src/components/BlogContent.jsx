@@ -19,7 +19,7 @@ const BlogContent = ({ blogs }) => {
     return <div>Nenhum blog correspondente encontrado.</div>;
   }
 
-  const blogContentHTML = { __html: filteredBlogs[0].attributes.blogContent }
+  const blogContentHTML = { __html: filteredBlogs[0].attributes.blogContent2 }
 
   return (
     <div className="w-full pb-10 bg-[#f9f9f9]">
