@@ -2,13 +2,13 @@
 - Styles with Tailwind CSS
 
 ## Run Project Blog Project
-- `git clone https://github.com/gabrielcarlossl/strapi-blog.git`
 
-- `npm i`
+1. On Strapi folder Copy the content of .env.example and paste inside of a new .env file 
+2. `npm i`
 
-- `npm run dev`
+3. `npm run dev`
 
-- `http://localhost:5173/`
+4. `http://localhost:5173/`
 
 ## Run Strapi CMS
 
